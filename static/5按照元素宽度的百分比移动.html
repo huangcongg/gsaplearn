@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>按照元素宽度的百分比移动</title>
+  <style>
+    #logo{
+      background-color: red;
+      width: 100px;
+    }
+  </style>
+</head>
+<body>
+  <div id="logo">你好李焕英</div>
+    <script src="https://unpkg.com/gsap@3.6.1/dist/gsap.js"></script>
+    <script>
+    // 按照元素宽度的百分比沿x轴移动
+    gsap.to('#logo',{duration: 3, xPercent: 1000})
+    // 按照元素宽度的百分比沿y轴移动
+    gsap.to('#logo',{duration: 3, yPercent: 1000})
+    </script>
+</body>
+</html>

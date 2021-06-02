@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>svg动画案例</title>
+  </head>
+  <body>
+    <svg viewBox="0 0 1200 600" style="background:yellow">
+      <rect id="r1" x="50" y="100" width="100" height="100" />
+      <rect id="r2" x="350" y="100" width="100" height="100" />
+    </svg>
+    <script src="https://unpkg.com/gsap@3.6.1/dist/gsap.js"></script>
+    <script>
+      // 10分钟搞定网页动画|gsap教程
+      gsap.set("#r1", { transformOrigin: "center" });
+      gsap.set("#r2", { transformOrigin: "center" });
+      let t1 = gsap.timeline(); // 时间线实例用于编排多个动画的执行顺序
+      t1.to("#r1", {
+        duration: 1,
+        x: 100,
+        scaleX: 2,
+        fill: "red",
+        stroke: "white",
+        rotation: 360,
+        strokeWidth: 5,
+        repeat: 1, // -1是重复无限次
+        yoyo: true, // 类似悠悠球一样的镜像运动，即运动完了之后再反向运动回来
+      });
+      t1.from(
+        "#r2",
+        {
+          duration: 1,
+          x: 100,
+          scaleX: 2,
+          fill: "red",
+          stroke: "white",
+          rotation: 360,
+          strokeWidth: 5,
+          repeat: 1, // -1是重复无限次
+          yoyo: true, // 类似悠悠球一样的镜像运动，即运动完了之后再反向运动回来
+        },
+        ">-0.5"
+      ); // 第三个参数中：>代表上一个动画结束时间点，<代表上一个动画开始的时间点，在这里表示上一个动画结束时间点往前推0.5s就执行第二个动画
+    </script>
+  </body>
+</html>

@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>贝塞尔曲线运动</title>
+    <title>设置属性</title>
     <style>
-      #logo{
+      #logo {
         background-color: red;
         width: 100px;
       }
@@ -16,13 +16,9 @@
     <div id="logo">你好李焕英</div>
     <script src="https://unpkg.com/gsap@3.6.1/dist/gsap.js"></script>
     <script>
-    // gsap.to('#logo',{duration: 3, rotationX: 360, repeat: 1})
-
-    // 沿着
-    // gsap.to('#logo',{duration: 3, rotationY: 360})
-
-    // 持续事件3s，移动到（100，100）的位置，放大两倍，扭曲45°，并沿着z轴顺时针旋转180°
-    gsap.to('#logo',{duration: 3, x: 100, y: 100, scale: 2, skewX: 45, rotation: 180})
+      // ease取值范围：none,power1,power2,power3,power4,back,elastic,bounce,rough,slow,steps,circ,expo,sine,custom
+      // type:in,out,inOut
+      gsap.to('#logo',{duration: 2, ease: `elastic.in`, x: 500})
     </script>
   </body>
 </html>

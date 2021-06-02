@@ -76,7 +76,7 @@ export default {
     // type:in,out,inOut
     // gsap.to('#logo',{duration: 2, ease: `sine`, x: 500})
 
-    // gsap.to('.stagger',{duration: 1, stagger: 1, x: 300}).to('.stagger', {duration: 1, stagger: 1, x: 0})
+    // gsap.to('.stagger',{duration: 1, stagger: 1, x: 300})
 
     // 10分钟搞定网页动画|gsap教程
     // gsap.set('#r1', {transformOrigin: 'center'})
