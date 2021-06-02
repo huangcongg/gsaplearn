@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贝塞尔曲线运动</title>
+  </head>
+  <body>
+    <div id="logo">你好李焕英</div>
+    <script src="https://unpkg.com/gsap@3.6.1/dist/gsap.js"></script>
+    <script>
+     // gsap.to不仅可以操作dom，还可以操作js对象
+    var obj = {prop: 10};
+    gsap.to(obj, {
+      duration: 1,
+      prop: 200, 
+      //onUpdate fires each time the tween updates; we'll explain callbacks later.
+      onUpdate: function() {
+        console.log(obj.prop); //logs the value on each update.
+      }
+    });
+    </script>
+  </body>
+</html>

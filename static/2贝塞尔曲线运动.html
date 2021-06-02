@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>贝塞尔曲线运动</title>
+  </head>
+  <body>
+    <div id="logo">你好李焕英</div>
+    <script src="https://unpkg.com/gsap@3.6.1/dist/gsap.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/MotionPathPlugin.js"
+    ></script>
+    <script>
+      gsap.registerPlugin(MotionPathPlugin);
+      // 贝塞尔曲线运动;
+      gsap.to("#logo", {
+        duration: 3,
+        motionPath: {
+          path: [
+            { x: 0, y: 0 },
+            { x: 500, y: 0 },
+            { x: 0, y: 200 },
+            { x: 500, y: 500 },
+          ],
+          type: "cubic",
+        },
+      });
+    </script>
+  </body>
+</html>
